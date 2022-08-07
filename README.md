@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
--  Live Site URL: [Interactive Rating Card]()
+-  Live Site URL: [Interactive Rating Card](https://interactive-rating-component-main-frontend.netlify.app/)
 
 ### Built with
 
