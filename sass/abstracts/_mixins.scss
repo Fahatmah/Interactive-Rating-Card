@@ -1,0 +1,6 @@
+@mixin flexCntr($x, $y, $dir) {
+	display: flex;
+	align-items: $y;
+	justify-content: $x;
+	flex-direction: $dir;
+}

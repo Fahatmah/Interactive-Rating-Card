@@ -1,0 +1,155 @@
+@use '../abstracts' as *;
+
+[class$='card'] {
+	@include flexCntr(center, center, column);
+	gap: 0.5rem;
+	width: min(100% - 2.5rem, 410px);
+	margin-inline: auto;
+	padding: 1.5rem;
+	border-radius: 2rem;
+	background: linear-gradient(
+		0deg,
+		rgba(21, 27, 35, 1) 26%,
+		rgba(50, 58, 67, 1) 180%
+	);
+	@include sm {
+		// gap: 1rem;
+		padding: 2rem;
+	}
+}
+
+.rating__card {
+	align-items: flex-start;
+	gap: 1rem;
+
+	.star {
+		background-color: $darkBlue;
+		border-radius: 50%;
+		padding: 0.7rem;
+		@include sm {
+			padding: 0.9rem;
+		}
+
+		img {
+			width: 0.9rem;
+			@include sm {
+				width: 1.1rem;
+			}
+		}
+	}
+
+	.texts {
+		margin-top: 1.05rem;
+
+		p {
+			margin-top: 0.5rem;
+			@include sm {
+				margin-top: 0.3rem;
+			}
+		}
+	}
+
+	.num__rate {
+		@include flexCntr(space-between, center, row);
+		gap: 1rem;
+		margin-top: 1.3rem;
+		width: 100%;
+		position: relative;
+		@include sm {
+			margin-top: 0.5rem;
+		}
+
+		.number {
+			background-color: $darkBlue;
+			@include flexCntr(center, center, row);
+			width: 2.6rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			font-size: 0.9rem;
+			color: $mediumGrey;
+			cursor: pointer;
+			transition: 0.2s ease-in-out;
+			@include sm {
+				width: 3.3rem;
+				height: 3.2rem;
+				font-size: 1rem;
+			}
+
+			&:hover {
+				background-color: $lightGrey;
+				color: $darkBlue;
+			}
+
+			&:active {
+				background-color: $orange;
+				color: $white;
+			}
+		}
+	}
+
+	button {
+		margin-top: 1rem;
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 0.7rem 0;
+		border-radius: 40px;
+		background-color: $orange;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+		transition: 0.1s ease-in-out;
+
+		&:hover {
+			background-color: $white;
+			color: $orange;
+		}
+
+		&:active {
+			background-color: $orange;
+			color: $white;
+		}
+	}
+}
+
+.thank__you__card {
+	display: none;
+	padding-block: 2.5rem;
+
+	&.show__thank__you__card {
+		display: flex;
+	}
+
+	img {
+		width: 9rem;
+		@include sm {
+			width: 10rem;
+		}
+	}
+
+	.rating {
+		background-color: $darkBlue;
+		border-radius: 40px;
+		padding: 0.3rem 1rem;
+		margin-top: 0.5rem;
+		@include sm {
+			margin-top: 1.8rem;
+		}
+
+		p,
+		span {
+			color: $orange;
+		}
+	}
+
+	h1 {
+		margin-top: 0.5rem;
+		@include sm {
+			margin-top: 1.5rem;
+		}
+	}
+
+	p {
+		text-align: center;
+	}
+}
